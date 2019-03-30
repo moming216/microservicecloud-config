@@ -27,6 +27,20 @@ mybatis:
   type-aliases-package: com.mowen.springcloud.entities
   mapper-locations: 
   - classpath:mybatis/mapper/**/*.xml
+  
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microservicecloud-dept8001
+    prefer-ip-address: true
+ 
+info: 
+  app.name: mowen-microservicecloud
+  company.name: www.mowen.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
 ---
 server:
   port: 8002
@@ -52,3 +66,17 @@ mybatis:
   type-aliases-package: com.mowen.springcloud.entities
   mapper-locations: 
   - classpath:mybatis/mapper/**/*.xml
+  
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: microservicecloud-dept8001
+    prefer-ip-address: true
+ 
+info: 
+  app.name: mowen-microservicecloud
+  company.name: www.mowen.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
