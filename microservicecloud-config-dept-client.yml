@@ -21,6 +21,12 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+
+mybatis: 
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.mowen.springcloud.entities
+  mapper-locations: 
+  - classpath:mybatis/mapper/**/*.xml
 ---
 server:
   port: 8002
@@ -40,3 +46,9 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+
+mybatis: 
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.mowen.springcloud.entities
+  mapper-locations: 
+  - classpath:mybatis/mapper/**/*.xml
