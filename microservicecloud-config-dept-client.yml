@@ -1,10 +1,10 @@
-spring:
+﻿spring:
   profiles:
     active:
     - dev
 ---
-server:
-  port: 8001
+server:   #注释
+  port: 8001  #注释
 
 spring: 
   profiles: dev
