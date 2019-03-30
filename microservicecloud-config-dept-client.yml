@@ -15,7 +15,7 @@ mybatis:
 spring:
   profile: dev
   application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -41,20 +41,15 @@ info:
   company.name: www.mowen.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
 ---
 server:
   port: 8001
   
-mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
-  type-aliases-package: com.mowen.springcloud.entities    # 所有Entity别名类所在包
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
-    
 spring:
   profile: test
   application:
-    name: microservicecloud-dept
+    name: microservicecloud-config-dept-client
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
@@ -66,7 +61,14 @@ spring:
       initial-size: 5                                       # 初始化连接数
       max-total: 5                                          # 最大连接数
       max-wait-millis: 200                                  # 等待连接获取的最大超时时间
-      
+ 
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.mowen.springcloud.entities    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+    
+     
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url: 
