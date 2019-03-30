@@ -8,9 +8,11 @@ server:
 
 spring: 
   profiles: dev
+  application: microservicecloud-config-dept-client
 ---
 server:
   port: 8002
 
 spring: 
   profiles: test
+  application: microservicecloud-config-dept-client
